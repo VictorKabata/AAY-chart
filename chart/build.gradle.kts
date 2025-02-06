@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
+
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.kotlin.plugin.compose")
@@ -36,7 +38,7 @@ kotlin {
         binaries.executable()
     }
 
-    /*wasmJs {
+    wasmJs {
         moduleName = "common"
         browser {
             val rootDirPath = project.rootDir.path
@@ -54,7 +56,7 @@ kotlin {
             }
         }
         binaries.executable()
-    }*/
+    }
 
     sourceSets {
         val commonMain by getting {
