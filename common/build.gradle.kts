@@ -1,20 +1,18 @@
-import org.jetbrains.compose.compose
-
 plugins {
-    kotlin("multiplatform")
-    id("org.jetbrains.compose")
-    id("com.android.library")
-    id("org.jetbrains.kotlin.plugin.compose")
+    alias(libs.plugins.multiplatform)
+    alias(libs.plugins.compose)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.android.library)
 }
 
 group = "com.aay"
 version = "1.0-SNAPSHOT"
 
 kotlin {
-    android()
-    jvm("desktop") {
-        // jvmToolchain(11)
-    }
+    androidTarget()
+
+    jvm("desktop")
+
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -52,4 +50,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    kotlin{
+        jvmToolchain(8)
+    }
+    namespace = "com.aay.common"
 }
