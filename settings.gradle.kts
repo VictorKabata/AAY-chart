@@ -9,5 +9,5 @@ pluginManagement {
 
 rootProject.name = "AAY-chart"
 
-include(":android", ":desktop", ":common", ":chart")
+include(":android", ":desktop", ":common", ":chart", "wasm")
 includeBuild("convention-plugins")
