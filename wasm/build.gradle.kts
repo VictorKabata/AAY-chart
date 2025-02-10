@@ -13,7 +13,7 @@ kotlin {
             val rootDirPath = project.rootDir.path
             val projectDirPath = project.projectDir.path
             commonWebpackConfig {
-                outputFileName = "chart.js"
+                outputFileName = "wasm.js"
                 devServer =
                     (devServer ?: KotlinWebpackConfig.DevServer()).apply {
                         static =
@@ -31,7 +31,7 @@ kotlin {
         val webMain by getting
 
         webMain.dependencies {
-            implementation(project(":common"))
+            // implementation(project(":common"))
 
             implementation(compose.runtime)
             implementation(compose.foundation)

@@ -44,7 +44,7 @@ kotlin {
     }
 
     wasmJs {
-        moduleName = "common"
+        moduleName = "chart"
         browser {
             val rootDirPath = project.rootDir.path
             val projectDirPath = project.projectDir.path
